@@ -1,12 +1,15 @@
 <template>
-  <start-page></start-page>
+  <my-container>
+    <start-page></start-page>
+  </my-container>
 </template>
 
 <script>
+import MyContainer from "./components/UI/MyContainer.vue";
 import StartPage from "./components/StartPage.vue";
 export default {
   name: "App",
-  components: { StartPage },
+  components: { MyContainer, StartPage },
 };
 </script>
 
