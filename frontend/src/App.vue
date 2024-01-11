@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <my-container>
+    <starts-page></starts-page>
+    <!-- <onboard-first></onboard-first> -->
+  </my-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MyContainer from "./components/UI/MyContainer.vue";
+import StartsPage from "./pages/StartsPage.vue";
+// import OnboardFirst from "./pages/OnboardFirst.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { MyContainer, StartsPage },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fdfdfd;
 }
 </style>
