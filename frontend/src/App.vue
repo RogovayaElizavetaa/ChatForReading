@@ -1,15 +1,17 @@
 <template>
   <my-container>
-    <start-page></start-page>
+    <!-- <start-page></start-page> -->
+    <onboard-first></onboard-first>
   </my-container>
 </template>
 
 <script>
 import MyContainer from "./components/UI/MyContainer.vue";
-import StartPage from "./components/StartPage.vue";
+// import StartPage from "./components/StartPage.vue";
+import OnboardFirst from "./pages/OnboardFirst.vue";
 export default {
   name: "App",
-  components: { MyContainer, StartPage },
+  components: { MyContainer, OnboardFirst },
 };
 </script>
 

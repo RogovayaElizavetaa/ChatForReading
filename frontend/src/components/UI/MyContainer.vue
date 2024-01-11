@@ -13,5 +13,6 @@ export default {};
   min-width: 320px;
   max-width: 768px;
   margin: 0 auto;
+  padding: 48px 16px 24px 16px;
 }
 </style>
