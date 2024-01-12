@@ -47,22 +47,15 @@ export default {
 .onboardin-title {
   text-align: center;
   color: var(--accent-text-color, #325f91);
-  font-family: "Raleway", sans-serif;
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 .onboarding-text {
   text-align: center;
   color: var(--main-text-color, #0c0c0c);
-  font-family: "Raleway", sans-serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   text-transform: lowercase;
   margin-bottom: 95px;
 }
