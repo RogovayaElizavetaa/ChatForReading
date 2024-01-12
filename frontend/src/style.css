@@ -51,3 +51,20 @@
   font-weight: 700;
   src: url("./fonts/Raleway-Bold.ttf") format("truetype");
 }
+
+:root {
+  --accent-text-color: #325f91;
+  --main-text-color: #0c0c0c;
+  --light-text-color: #fefefe;
+  --disabled-text-color: #939393;
+  --danger-text-color: #c81515;
+  --danger-disabled-text-color: #f46666;
+
+  --background-color: #fdfdfd;
+  --background-message-blue: #e6ecf3;
+  --background-message-yellow: F9F3CC;
+
+  --main-button-color: #6792c1;
+  --accent-button-color: #325f91;
+  --disabled-button-color: #d7d8d8;
+}
