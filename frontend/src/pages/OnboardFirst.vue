@@ -1,18 +1,20 @@
 <template>
-  <div class="background-onbording-first">
-    <img
-      class="girl-one"
-      src="@/assets/girl1.svg"
-      alt="Дівчина що читає книгу"
-    />
-    <img
-      class="girl-two"
-      src="@/assets/girl2.svg"
-      alt="Дівчина що розмірковує над книгою"
-    />
+  <div>
+    <div class="background-onbording-first">
+      <img
+        class="girl-one"
+        src="@/assets/girl1.svg"
+        alt="Дівчина що читає книгу"
+      />
+      <img
+        class="girl-two"
+        src="@/assets/girl2.svg"
+        alt="Дівчина що розмірковує над книгою"
+      />
+    </div>
+    <h2 class="onboardin-title">обговорюй</h2>
+    <p class="onboarding-text">прочитані книги українською</p>
   </div>
-  <h2 class="onboardin-title">обговорюй</h2>
-  <p class="onboarding-text">прочитані книги українською</p>
 </template>
 
 <script>
@@ -40,9 +42,23 @@ export default {};
 }
 .onboardin-title {
   text-align: center;
+  color: var(--Text-onboarding-title, #325f91);
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 .onboarding-text {
   text-align: center;
+  color: var(--Text-dark, #0c0c0c);
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: lowercase;
 }
 </style>
