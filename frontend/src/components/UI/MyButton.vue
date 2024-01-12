@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" :class="color" @click="$emit('action')">
+  <button class="btn" @click="$emit('action')">
     <slot />
   </button>
 </template>
@@ -8,12 +8,9 @@
 export default {
   emits: ["action"],
   props: {
-    color: {
+    type: {
       type: String,
       default: "",
-      validator(value) {
-        ["", "primary", "danger"].includes(value);
-      },
     },
   },
 };
@@ -22,27 +19,24 @@ export default {
 <style scoped>
 .btn {
   display: inline-block;
-  min-width: 100px;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #2756a8ad;
+  width: 100%;
+  border-radius: 24px;
+  background-color: var(--main-button-color, #6792c1);
+  padding: 17px 102px;
   border: transparent;
-  color: white;
+
+  color: var(--light-text-color, #fefefe);
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.danger {
-  color: rgb(219, 29, 29);
-  border: 1px solid red;
-}
-
-.primary {
-  color: orange;
-  border: 1px solid orange;
-}
-
 .btn:hover {
-  border: transparent;
-  background-color: rgb(0, 119, 128);
+  background-color: var(--accent-button-color, #325f91);
+}
+
+.btn[disabled] {
+  background-color: var(--disabled-button-color, #d7d8d8);
 }
 </style>

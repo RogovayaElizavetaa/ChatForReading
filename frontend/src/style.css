@@ -62,9 +62,38 @@
 
   --background-color: #fdfdfd;
   --background-message-blue: #e6ecf3;
-  --background-message-yellow: F9F3CC;
+  --background-message-yellow: #f9f3cc;
 
   --main-button-color: #6792c1;
   --accent-button-color: #325f91;
   --disabled-button-color: #d7d8d8;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--main-text-color);
+  background: var(--background-color, #fdfdfd);
+
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
 }
