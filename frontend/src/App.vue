@@ -22,6 +22,6 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background: #fdfdfd;
+  background: var(--background-color, #fdfdfd);
 }
 </style>

@@ -14,11 +14,15 @@
     </div>
     <h2 class="onboardin-title">обговорюй</h2>
     <p class="onboarding-text">прочитані книги українською</p>
+    <my-button type="firstButton">Дізнатися більше</my-button>
   </div>
 </template>
 
 <script>
-export default {};
+import MyButton from "@/components/UI/MyButton.vue";
+export default {
+  components: { MyButton },
+};
 </script>
 
 <style scoped>
@@ -42,7 +46,7 @@ export default {};
 }
 .onboardin-title {
   text-align: center;
-  color: var(--Text-onboarding-title, #325f91);
+  color: var(--accent-text-color, #325f91);
   font-family: "Raleway", sans-serif;
   font-size: 40px;
   font-style: normal;
@@ -53,12 +57,13 @@ export default {};
 }
 .onboarding-text {
   text-align: center;
-  color: var(--Text-dark, #0c0c0c);
+  color: var(--main-text-color, #0c0c0c);
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: lowercase;
+  margin-bottom: 95px;
 }
 </style>
