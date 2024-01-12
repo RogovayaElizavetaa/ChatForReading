@@ -14,7 +14,10 @@
     </div>
     <h2 class="onboardin-title">обговорюй</h2>
     <p class="onboarding-text">прочитані книги українською</p>
-    <my-button type="firstButton">Дізнатися більше</my-button>
+    <my-button type="firstButton" class="first-button"
+      >Дізнатися більше</my-button
+    >
+    <my-button type="secondButton">Пропустити</my-button>
   </div>
 </template>
 
@@ -58,5 +61,8 @@ export default {
   font-size: 20px;
   text-transform: lowercase;
   margin-bottom: 95px;
+}
+.first-button {
+  margin-bottom: 8px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" @click="$emit('action')">
+  <button class="btn" :class="buttonClass" @click="$emit('action')">
     <slot />
   </button>
 </template>
@@ -13,6 +13,14 @@ export default {
       default: "",
     },
   },
+  computed: {
+    buttonClass() {
+      return {
+        "first-button": this.type === "firstButton",
+        "second-button": this.type === "secondButton",
+      };
+    },
+  },
 };
 </script>
 
@@ -20,23 +28,37 @@ export default {
 .btn {
   display: inline-block;
   width: 100%;
-  border-radius: 24px;
-  background-color: var(--main-button-color, #6792c1);
   padding: 17px 102px;
   border: transparent;
 
-  color: var(--light-text-color, #fefefe);
-  font-size: 18px;
   font-family: inherit;
-  font-weight: 600;
+
   cursor: pointer;
 }
 
-.btn:hover {
+.first-button {
+  border-radius: 24px;
+  background-color: var(--main-button-color, #6792c1);
+  color: var(--light-text-color, #fefefe);
+  font-size: 18px;
+  font-weight: 600;
+}
+.first-button:hover {
   background-color: var(--accent-button-color, #325f91);
 }
 
-.btn[disabled] {
+.first-button[disabled] {
   background-color: var(--disabled-button-color, #d7d8d8);
+}
+
+.second-button {
+  background-color: var(--background-color, #fdfdfd);
+  color: var(--disabled-text-color, #939393);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.second-button:hover {
+  color: var(--accent-text-color, #325f91);
 }
 </style>
