@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  emits: ["action"],
   props: {
     type: {
       type: String,
@@ -28,7 +27,7 @@ export default {
 .btn {
   display: inline-block;
   width: 100%;
-  padding: 17px 102px;
+  padding: 17px 0;
   border: transparent;
 
   font-family: inherit;

@@ -14,17 +14,40 @@
     </div>
     <h2 class="onboardin-title">обговорюй</h2>
     <p class="onboarding-text">прочитані книги українською</p>
-    <my-button type="firstButton" class="first-button"
+    <my-button
+      type="firstButton"
+      class="first-button"
+      @click="handleFirstButtonClick"
       >Дізнатися більше</my-button
     >
-    <my-button type="secondButton">Пропустити</my-button>
+    <my-button
+      type="secondButton"
+      class="second-button"
+      @click="handleSecondButtonClick"
+      >Пропустити</my-button
+    >
+    <page-indicator :totalPages="3" :currentPage="currentPage"></page-indicator>
   </div>
 </template>
 
 <script>
 import MyButton from "@/components/UI/MyButton.vue";
+import PageIndicator from "@/components/UI/PageIndicator.vue";
 export default {
-  components: { MyButton },
+  components: { MyButton, PageIndicator },
+  data() {
+    return {
+      currentPage: 0,
+    };
+  },
+  methods: {
+    handleFirstButtonClick() {
+      console.log("Button1");
+    },
+    handleSecondButtonClick() {
+      console.log("Button2");
+    },
+  },
 };
 </script>
 
@@ -64,5 +87,9 @@ export default {
 }
 .first-button {
   margin-bottom: 8px;
+}
+
+.second-button {
+  margin-bottom: 35px;
 }
 </style>
