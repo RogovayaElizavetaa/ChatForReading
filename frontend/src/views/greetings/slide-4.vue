@@ -1,0 +1,52 @@
+<template>
+  <div class="slide container" v-cloak>
+      <img class="slide__image" src="@/assets/img/titleslidethree.png" alt="slide">
+      <div class="slide__text">
+        <div class="slide__tittle h2">ОБМІНЮЙСЯ</div>
+        <div class="slide__description h3">прочитаними книгами</div>
+      </div>
+      <btn 
+        :title="buttonTitle" 
+        @click="nextpage"
+        @skip-all="skipall"
+        :skiptext="buttonskip"
+      />
+  </div>
+  
+</template>
+<script>
+import btn from '@/components/greetings/button-table.vue';
+export default{
+  components: {
+    btn,
+  },
+  data() {
+    return {
+      buttonTitle: 'Почнемо!',
+      buttonskip: 'Пропустити',
+    };
+  },
+  methods: {
+    nextpage(){
+      this.$router.push('#')
+    },
+    skipall(){
+      this.$router.push('#')
+    }
+  }
+ }
+
+</script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
