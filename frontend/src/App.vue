@@ -10,11 +10,6 @@ export default {
     return {
       currentpage: slide1,
     };
-  },
-  methods: {
-    changepage(pagename) {
-      this.$router.push({ name: pagename.name });
-    }
   }
 }
 </script>
