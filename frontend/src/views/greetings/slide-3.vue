@@ -1,41 +1,43 @@
-
 <template>
-    <div class="slide container" v-cloak>
-        <img class="slide__img" src="@/assets/img/titleslidesecond.png" alt="slide">
-        <div class="slide__text">
-          <div class="slide__tittle h2">ВІДКРИВАЙ</div>
-          <div class="slide__description h3">молодих авторів</div>
-        </div>
-        <btn 
-          :title="buttonTitle" 
-          @click="nextpage"
-          @skip-all="skipall"
-          :skiptext="buttonskip"
-        />
+  <div class="slide container" v-cloak>
+    <div class="background-onbording background-onbording-second">
+      <img
+        class="girl-with-book"
+        src="@/assets/img/girl-with-book.svg"
+        alt="Дівчина захоплено читає книгу"
+      />
     </div>
-    
-  </template>
-  <script>
-  import btn from '@/components/greetings/button-table.vue';
-  export default{
-    components: {
-      btn,
+    <div class="slide__text">
+      <div class="slide__tittle h2">ВІДКРИВАЙ</div>
+      <div class="slide__description h3">молодих авторів</div>
+    </div>
+    <btn
+      :title="buttonTitle"
+      @click="nextpage"
+      @skip-all="skipall"
+      :skiptext="buttonskip"
+    />
+  </div>
+</template>
+<script>
+import btn from "@/components/greetings/button-table.vue";
+export default {
+  components: {
+    btn,
+  },
+  data() {
+    return {
+      buttonTitle: "... і ще більше...",
+      buttonskip: "Пропустити",
+    };
+  },
+  methods: {
+    nextpage() {
+      this.$router.push("slide4");
     },
-    data() {
-      return {
-        buttonTitle: '... і ще більше...',
-        buttonskip: 'Пропустити',
-      };
+    skipall() {
+      this.$router.push("#");
     },
-    methods: {
-      nextpage(){
-        this.$router.push('slide4')
-      },
-      skipall(){
-        this.$router.push('#')
-      }
-    }
-   }
-  
-  </script>
-  
+  },
+};
+</script>

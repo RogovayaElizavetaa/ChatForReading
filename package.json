@@ -4,9 +4,10 @@
   "description": "This is a literary chat project",
   "main": "index.js",
   "scripts": {
+    "installation": "npm i && cd ./backend && npm i && cd ../frontend && npm i",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "cd ./backend && npm run start:dev",
-    "front": "cd ./frontend && npm run serve"
+    "front": "cd ./frontend && npm run run"
   },
   "author": "",
   "license": "ISC"
