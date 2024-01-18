@@ -17,13 +17,16 @@
       @skip-all="skipall"
       :skiptext="buttonskip"
     />
+    <page-indicator :totalPages="3" :currentPage="3"></page-indicator>
   </div>
 </template>
 <script>
 import btn from "@/components/greetings/button-table.vue";
+import PageIndicator from "@/components/UI/PageIndicator.vue";
 export default {
   components: {
     btn,
+    PageIndicator,
   },
   data() {
     return {

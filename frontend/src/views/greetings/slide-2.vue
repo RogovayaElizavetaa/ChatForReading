@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="container"> -->
   <div class="slide container" v-cloak>
     <div class="background-onbording background-onbording-first">
       <img
@@ -23,14 +22,16 @@
       @skip-all="skipall"
       :skiptext="buttonskip"
     />
+    <page-indicator :totalPages="3" :currentPage="1"></page-indicator>
   </div>
-  <!-- </div> -->
 </template>
 <script>
 import btn from "@/components/greetings/button-table.vue";
+import PageIndicator from "@/components/UI/PageIndicator.vue";
 export default {
   components: {
     btn,
+    PageIndicator,
   },
   data() {
     return {

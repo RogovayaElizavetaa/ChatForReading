@@ -2,7 +2,7 @@
  <lab />
 </template>
 <script>
-import lab from '../../components/greetings/icon/K-lab.vue';
+import lab from '@/components/greetings/icon/K-lab.vue';
 export default{
   components:{
     lab,

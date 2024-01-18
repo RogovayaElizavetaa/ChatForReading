@@ -1,9 +1,9 @@
 <template>
   <div class="page-indicator">
     <div
-      v-for="(circle, index) in circles"
+      v-for="circle, index in circles"
       :key="index"
-      :class="{ active: index === currentPage }"
+      :class="{ 'active': index + 1 === currentPage }"
     ></div>
   </div>
 </template>
