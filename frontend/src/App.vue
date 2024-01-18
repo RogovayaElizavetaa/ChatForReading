@@ -1,18 +1,15 @@
-<template>
-  <my-container>
-    <!-- <starts-page></starts-page> -->
-    <onboard-first></onboard-first>
-  </my-container>
+<template id="app" v-cloak>
+  <router-view></router-view>
 </template>
 
 <script>
-import MyContainer from "./components/UI/MyContainer.vue";
-// import StartsPage from "./pages/StartsPage.vue";
-import OnboardFirst from "./pages/OnboardFirst.vue";
-export default {
-  name: "App",
-  components: { MyContainer, OnboardFirst },
-};
-</script>
+import slide1 from '@/views/greetings/slide-1.vue';
 
-<style></style>
+export default {
+  data() {
+    return {
+      currentpage: slide1,
+    };
+  }
+}
+</script>

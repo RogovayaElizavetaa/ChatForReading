@@ -1,12 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router/router';
-import './style.css'
+import router from './router';
+import './assets/main.scss'
 
-const app = createApp(App);
 
-// components.forEach(component => {
-//     app.component(component.name, component)
-// })
-
-app.use(router).mount('#app')
+createApp(App).use(router).mount('#app');
