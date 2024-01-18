@@ -1,6 +1,10 @@
 * {
   font-family: $font;
 }
+html,
+body {
+  height: 100%;
+}
 // #app {
 //   margin: 0 auto;
 //   max-width: $maxwidth;
