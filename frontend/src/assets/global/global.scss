@@ -37,7 +37,7 @@ img {
 }
 body {
   color: var(--main-text-color);
-  background: var(--background-color, #fdfdfd);
+  background: var(--background-color, $background-color);
 
   font-family: $font;
   font-size: 16px;

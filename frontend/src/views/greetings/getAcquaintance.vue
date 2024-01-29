@@ -19,6 +19,9 @@
         </p>
         <form @submit.prevent="submitHandler">
           <app-input label="Нікнейм" v-model.trim="nikname"></app-input>
+          <p class="acquaintance__explanation">
+            Нікнейм може містити лише латинські літери і цифри.
+          </p>
         </form>
       </div>
     </div>
