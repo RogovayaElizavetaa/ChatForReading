@@ -1,0 +1,37 @@
+.acquaintance {
+  &__text {
+    // margin: 0 0 86px 0;
+    text-align: center;
+    line-height: normal;
+
+    form {
+      position: relative;
+    }
+
+    form > div > label {
+      color: red;
+      position: absolute;
+    }
+    form > div > input {
+      border-color: red;
+    }
+  }
+  &__tittle {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    font-size: 32px;
+    color: $accent-text-color;
+  }
+  &__description {
+    margin: 0 0 8px 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: $main-text-color;
+  }
+  &__caption {
+    margin: 0 38px 29px 38px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $disabled-text-color;
+  }
+}
